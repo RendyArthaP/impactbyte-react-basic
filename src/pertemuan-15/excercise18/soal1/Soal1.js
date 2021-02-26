@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Excercise18 = () => {
+const Soal1 = () => {
   const [counter, setCounter] = useState(0)
 
   const increase = () => {
@@ -26,4 +26,4 @@ const Excercise18 = () => {
   )
 }
 
-export default Excercise18
+export default Soal1
