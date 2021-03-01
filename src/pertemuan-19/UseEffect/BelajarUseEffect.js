@@ -9,8 +9,9 @@ const BelajarUseEffect = () => {
     // fetch(url)
     //   .then((response) => response.json())
     //   .then((result) => setPosts(result))
-    
-    axios.get("https://jsonplaceholder.typicode.com/posts")
+
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => setPosts(response.data))
   }
 
