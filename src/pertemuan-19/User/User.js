@@ -25,6 +25,16 @@ const User = () => {
       })
       .catch(err => console.log(err))
   }
+
+  const handleDelete = (listUser) => {
+    console.log(listUser)
+    axios.delete(`https://6023a95a6bf3e6001766b546.mockapi.io/user/${listUser.id}`)
+      .then(result => {
+        let newData = listUsers.filter(value => value.id !== listUser.id)
+        setListUsers([...newData])
+      })
+      .catch(err => console.log(err))
+  }
  
   return (
     <div>
@@ -34,7 +44,10 @@ const User = () => {
         onChange={(e) => setInputUser(e.target.value)}
       />
       <button onClick={handleSubmit}>Submit</button>
-      <ListUser listUsers={listUsers}/>
+      <ListUser 
+        listUsers={listUsers}
+        handleDelete={handleDelete}
+      />
     </div>
   )
 }

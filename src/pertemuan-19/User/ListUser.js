@@ -1,13 +1,13 @@
 import React from 'react'
 
-const ListUser = ({listUsers}) => {
+const ListUser = ({listUsers, handleDelete}) => {
   return (
     <div>
       {listUsers.map((listUser) => (
         <div key={listUser.id}>
           <span>{listUser.user}</span>
-          <button>X</button>
-          <button>Edit</button>
+          <button onClick={() => handleDelete(listUser)}>X</button>
+          {/* <button>Edit</button> */}
         </div>
       ))}
     </div>
