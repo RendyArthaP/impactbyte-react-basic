@@ -4,6 +4,7 @@ import {datas} from '../soal2/data'
 const Soal2 = () => {
   return (
     <div>
+      {console.log(datas)}
       {datas.map((data) => (
         <div key={data.id}>
           <h1>{data.nama}</h1>
